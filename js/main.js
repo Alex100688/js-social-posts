@@ -54,5 +54,11 @@ const posts = [
         "likes": 95,
         "created": "2021-03-05"
     }
+
+
+    
 ];
-console.log(posts);
+for (let i = 0; i < posts.length; i++) {
+    const listPost = posts[i];
+    
+}
