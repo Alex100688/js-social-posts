@@ -1,3 +1,4 @@
+//Lista array contenente degli oggetti con informazioni(id del post, contenuto del posto, media, autore(nome dell'autore e foto dell'autore)).//
 const posts = [
     {
         "id": 1,
@@ -53,11 +54,11 @@ const posts = [
         },
         "likes": 95,
         "created": "2021-03-05"
-    }
-
-
-    
+    }    
 ];
+//Salva in una constante(post) e seleziona salvando all'interno della classe("post").
+const post=document.querySelector(".post")
+//Ciclo for per ciclare il numero degli array.
 for (let i = 0; i < posts.length; i++) {
     const listPost = posts[i];
     
