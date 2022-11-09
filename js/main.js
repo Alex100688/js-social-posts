@@ -62,10 +62,20 @@ const post=document.querySelector(".post")
 for (let i = 0; i < posts.length; i++) {
     const listPost = posts[i];
     const listSocial=document.getElementById("social-posts").content.cloneNode(true);
-    listSocial.querySelector(".post-meta").innerHTML=listPost.id;
-    
-
-    
+    listSocial.querySelector(".post__header").innerHTML=listPost.id;
+    listSocial.querySelector(".post__image").innerHTML=listPost.author["immage"];
+    listSocial.querySelector(".post-meta__author").innerHTML=listPost.author["name"];
+    listSocial.querySelector(".post-meta__time").innerHTML=listPost.created
+    listSocial.querySelector(".post__text").innerHTML=listPost.content;
+    listSocial.querySelector(".post-meta__icon").innerHTML=listPost.media;
+    listSocial.querySelector(".likes-counter").innerHTML=listPost.likes;
     post.append(listSocial);
+};
 
-}
+
+const likeButton=document.querySelector(".like-button__label");
+likeButton.addEventListener('clic', function(){
+        likeButton.classList.add("like-button--liked");
+    }
+)
+
