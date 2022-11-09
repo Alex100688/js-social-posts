@@ -61,5 +61,11 @@ const post=document.querySelector(".post")
 //Ciclo for per ciclare il numero degli array.
 for (let i = 0; i < posts.length; i++) {
     const listPost = posts[i];
+    const listSocial=document.getElementById("social-posts").content.cloneNode(true);
+    listSocial.querySelector(".post-meta").innerHTML=listPost.id;
     
+
+    
+    post.append(listSocial);
+
 }
